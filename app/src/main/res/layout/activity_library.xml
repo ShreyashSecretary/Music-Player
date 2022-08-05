@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".audio.mediaplayer.activities.LibraryActivity"
+    android:background="@drawable/bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
+        android:layout_marginTop="@dimen/_15sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/ivBackLibrary"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                />
+
+            <!--<TextView
+                android:id="@+id/tvLibraryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Library"
+                android:layout_toRightOf="@+id/ivBackLibrary"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                />-->
+
+            <ImageView
+                android:id="@+id/ivMoreOption"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/more"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_2sdp"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:src="@drawable/search"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rlTavViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        >
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/cvTopNavigation"
+            android:layout_marginTop="1dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTopNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_20sdp"
+            android:layout_alignParentBottom="true"
+            >
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tlTopNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabSelectedTextColor="@color/SelectedTab"
+                app:tabTextColor="@color/white"
+                android:background="@color/musictrack"
+                app:tabIndicatorHeight="@dimen/_2sdp"
+                app:tabGravity="start"
+                android:scrollbars="horizontal"
+                app:tabMode="scrollable"
+                >
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tiTrackTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/library"
+                    android:text="Tracks" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tlArtistTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/library"
+                    android:text="Artists" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tiAlbumTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/library"
+                    android:text="Albums" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tiPlaylist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/playlist"
+                    android:text="Playlist" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tiGenreTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/library"
+                    android:text="Genres" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tiFolders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/folder"
+                    android:text="Folder" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--<RelativeLayout
+            android:id="@+id/rlPlayingSong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/musictrack"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rlPlayingSongNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/ivPlayPause"
+                android:layout_centerVertical="true"
+                >
+
+            <ImageView
+                android:id="@+id/ivPlayingSongImage"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:background="@drawable/music_photo"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_centerVertical="true"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ivPlayingSongImage"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                >
+
+                <TextView
+                    android:id="@+id/tvPlayingSongName"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Favourite"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    />
+
+                <TextView
+                    android:id="@+id/tvPlayingSongArtist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvPlayingSongName"
+                    android:text="5 songs"
+                    android:textColor="@color/countTxt"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    />
+
+            </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/ivPlayPause"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/pause"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:tint="@color/SelectedTab"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

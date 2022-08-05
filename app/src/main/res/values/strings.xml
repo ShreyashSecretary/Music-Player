@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Music Player</string>
+
+    <string name="permission_text">This app need your storage permission for reading songs from your device</string>
+    <string name="songs">Songs</string>
+    <string name="artist">Artist</string>
+    <string name="album">Album</string>
+    <string name="genre">Genres</string>
+    <string name="folder">Folder</string>
+    <string name="playlist">Playlist</string>
+    <string name="accessibility_overflow">Accessibility Overflow</string>
+
+    <!--      Original Ids       -->
+
+    <string name="unit_ad_id">ca-app-pub-2710573691140013~7840780977</string>
+    <string name="banner_ad_id">ca-app-pub-2710573691140013/7654940539</string>
+    <string name="interstitial_ad_id">ca-app-pub-2710573691140013/3901535967</string>
+    <string name="native_ad_id">ca-app-pub-2710573691140013/4837205504</string>
+    <string name="app_open_id">ca-app-pub-2710573691140013/2211042161</string>
+
+
+    <!--      Test Ids       -->
+
+   <!-- <string name="unit_ad_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_ad_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_ad_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="native_ad_id">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="app_open_id">ca-app-pub-3940256099942544/3419835294</string>-->
+
+    <string name="email_id">paras07it36@gmail.com</string>
+
+    <string name="onesignal">8a075118-ea96-4e97-8b72-6490f3aad417</string>
+
+    <string name="appmatrica">419cfed7-1d86-4388-9906-f92c4e81af5d</string>
+
+
+
+</resources>

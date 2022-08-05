@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Transparent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rlArtistLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvArtist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ivNoData"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:text="No Songs Found"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/_22sdp"
+        android:layout_centerInParent="true"
+        android:textAllCaps="false"
+        />
+
+    <FrameLayout
+        android:id="@+id/flArtistSongs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>

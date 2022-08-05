@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.music.mp3player.audio.mediaplayer">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/appicon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MusicPlayer"
+        >
+
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/unit_ad_id"/>
+
+        <!--<activity
+            android:name=".activities.EqualizerActivity"
+            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".activities.PermissionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PlayingSongActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Service.MusicService"
+            android:enabled="true"
+            android:exported="true"
+            />
+
+        <receiver
+            android:name=".Reciever.NotificationReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="actionPrevious" />
+                <action android:name="actionNext" />
+                <action android:name="actionPlay" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

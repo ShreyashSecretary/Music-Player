@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Used to set the rounded corners of the information dialog box -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/_10sdp"></corners>
+    <solid android:color="@color/dialog_color"></solid>
+
+</shape>

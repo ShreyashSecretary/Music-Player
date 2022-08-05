@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Transparent"
+    android:gravity="center">
+
+
+    <RelativeLayout
+        android:id="@+id/rlNewPlaylistName"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:background="@drawable/dialog_round"
+        android:gravity="center"
+        >
+
+        <RelativeLayout
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/tvPlaylist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create PlayList"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textSize="@dimen/_15ssp"
+                />
+
+
+            <EditText
+                android:id="@+id/edtPlaylistName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_horizontal"
+                android:hint="Enter Playlist Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textColorHint="@color/black"
+                android:cursorVisible="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/spinner_background"
+                android:layout_marginLeft="@dimen/_50sdp"
+                />
+
+            <TextView
+                android:id="@+id/tvCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:text="Create"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                />
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/tvCreate"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

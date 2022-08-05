@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Transparent"
+    android:gravity="center">
+
+
+    <RelativeLayout
+        android:id="@+id/rlRateUsLayout"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_190sdp"
+        android:background="@drawable/dialog_round"
+        android:gravity="center"
+        >
+
+        <RelativeLayout
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/tvRateUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate US"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textSize="@dimen/_15ssp"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                />
+
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:text="If you like this app please rate us"
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:textAlignment="center"
+                android:layout_below="@+id/tvRateUs"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                />
+            
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tvMessage"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:numStars="5"
+                android:stepSize="1"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:theme="@style/RatingBar"
+                android:progressTint="@color/SelectedTab"
+                />
+
+            <TextView
+                android:id="@+id/tvSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginRight="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                />
+
+            <TextView
+                android:id="@+id/tvLater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="Later"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/_40sdp"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:background="@drawable/bg_3"
+    android:alpha="1"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5C000000" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
+        android:layout_marginTop="@dimen/_15sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/ivBackFragment"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                app:tint="@color/white"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tvToolbarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tracks"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/ivSearchMain"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/search"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                app:tint="@color/white"
+                android:padding="@dimen/_2sdp"
+                />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tlTopNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="#800B0B18"
+        android:scrollbars="horizontal"
+        app:tabGravity="fill"
+        app:tabIconTint="@color/tab_icon_color"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/SelectedTab"
+        app:tabTextColor="@color/white"
+        android:layout_alignParentBottom="true"
+        style="@style/Tab"
+        android:paddingBottom="@dimen/_5sdp"
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiTrackTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/track"
+            android:text="Tracks" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tlArtistTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/new_artist"
+            android:text="Artists" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiAlbumTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/new_albums"
+            android:text="Albums" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiPlaylist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/playlis"
+            android:text="Playlist" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiGenreTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/new_genres"
+            android:text="Genres" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiFolders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/folder"
+            android:text="Folder" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/slidingPanel"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="@dimen/_52sdp"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/tlTopNavigation"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <FrameLayout
+                android:id="@+id/flMainFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                />
+
+            <com.music.mp3player.audio.mediaplayer.CustomViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp" />
+
+    </RelativeLayout>
+
+        <include layout="@layout/sliding_window_layout"/>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:id="@+id/rlAlbumItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_7sdp"
+            >
+
+            <ImageView
+                android:id="@+id/ivAlbumItem"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/countTxt"
+                android:layout_marginTop="@dimen/_7sdp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivAlbumItem"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                >
+
+                <TextView
+                    android:id="@+id/tvAlbumName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Favourite"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textAlignment="center"
+                    />
+
+                <TextView
+                    android:id="@+id/tvAlbumListCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAlbumName"
+                    android:text="5 songs"
+                    android:textColor="@color/countTxt"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:textAlignment="center"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>

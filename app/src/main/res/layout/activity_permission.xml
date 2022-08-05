@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activities.PermissionActivity"
+    android:background="@drawable/bg_3"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5C000000"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/appicon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_100sdp"
+        />
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Storage Permission"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/_22ssp"
+        />
+
+    <TextView
+        android:id="@+id/tvPermissionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/permission_text"
+        android:textColor="@color/white"
+        android:layout_below="@+id/tvHeading"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:id="@+id/btnGetPermission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Permission"
+        android:textColor="@color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:background="@drawable/round_image"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="30dp"
+        />
+
+
+
+
+
+</RelativeLayout>
